@@ -3,6 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 using ECommerceAPI.Models;
 using System.Collections.Generic;
+using System;
 
 namespace ECommerceAPI.Models
 {
@@ -41,10 +42,10 @@ namespace ECommerceAPI.Models
         public bool cert_cus { get; set; }
 
         [BsonElement("created_at")]
-        public string created_at { get; set; }
+        public DateTime created_at { get; set; }
 
         [BsonElement("updated_at")]
-        public string updated_at { get; set; }
+        public DateTime updated_at { get; set; }
 
         [BsonElement("order_detail")]
         public List<OrderDetail> order_detail { get; set; }

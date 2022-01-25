@@ -31,11 +31,7 @@ namespace ECommerceAPI.Services
         {
             try
             {
-                order.created_at = DateTime.Now.ToString();
-                order.updated_at = DateTime.Now.ToString();
-
                 _orders.InsertOne(order);
-                 Debug.WriteLine(JsonSerializer.Serialize(order)); 
             }
             catch (MongoWriteException e)
             {

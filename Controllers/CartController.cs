@@ -36,7 +36,7 @@ namespace ECommerceAPI.Controllers
 
             var cart = GetCartItems(CARTKEY);
 
-            var cartitem = cart.Find(p => p.product.product_id == productid);
+            var cartitem = cart.Find(p => p.product.id == productid);
             if (cartitem != null)
             {
                 cartitem.quantity++;
@@ -55,7 +55,7 @@ namespace ECommerceAPI.Controllers
         public ActionResult<List<CartItem>> UpdateCartQuantity([FromRoute] string productid, [FromRoute] int quantity)
         {
             var cart = GetCartItems(CARTKEY);
-            var cartitem = cart.Find(p => p.product.product_id == productid);
+            var cartitem = cart.Find(p => p.product.id == productid);
             if (cartitem != null)
             {
                 cartitem.quantity = quantity;
@@ -69,7 +69,7 @@ namespace ECommerceAPI.Controllers
         public ActionResult<List<CartItem>> RemoveCart([FromRoute] string productid)
         {
             var cart = GetCartItems(CARTKEY);
-            var cartitem = cart.Find(p => p.product.product_id == productid);
+            var cartitem = cart.Find(p => p.product.id == productid);
             if (cartitem != null)
             {
                 cart.Remove(cartitem);

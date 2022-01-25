@@ -11,19 +11,19 @@ namespace ECommerceAPI.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string product_id { get; set; }
+        public string id { get; set; }
 
         [BsonElement("Name")]
-        public string product_name { get; set; }
+        public string Name { get; set; }
 
         [BsonElement("Price")]
-        public decimal product_price { get; set; }
+        public decimal Price { get; set; }
 
         [BsonElement("Category")]
-        public string product_category { get; set;}
+        public string Category { get; set;}
 
         [BsonElement("ImagePath")]
-        public string image_path { get; set; }
+        public string ImagePath { get; set; }
 
         [BsonElement("ShopID")]
         public string shop_id { get; set; }

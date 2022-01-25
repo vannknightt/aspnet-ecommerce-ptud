@@ -9,20 +9,20 @@ namespace ECommerceAPI.Models
     [BsonIgnoreExtraElements]
     public class OrderDetail
     {
-        [BsonElement("product_id")]
-        public string product_id { get; set; }
+        [BsonElement("ProductID")]
+        public string ProductID { get; set; }
 
-        [BsonElement("product_name")]
-        public string product_name { get; set; }
+        [BsonElement("Name")]
+        public string Name { get; set; }
 
-        [BsonElement("product_price")]
-        public int product_price { get; set; }
+        [BsonElement("Price")]
+        public int Price { get; set; }
 
-        [BsonElement("product_quantity")]
-        public int product_quantity { get; set; }
+        [BsonElement("Quantity")]
+        public int Quantity { get; set; }
 
-        [BsonElement("image_path")]
-        public string image_path { get; set; }
+        [BsonElement("ImagePath")]
+        public string ImagePath { get; set; }
     }
 }
 

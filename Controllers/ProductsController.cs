@@ -44,7 +44,7 @@ namespace ECommerceAPI.Controllers
         {
             _productService.Create(product);
 
-            return CreatedAtRoute("GetProduct", new { id = product.product_id.ToString() }, product);        }
+            return CreatedAtRoute("GetProduct", new { id = product.id.ToString() }, product);        }
 
         [HttpPut("{id:length(24)}")]
         public IActionResult Update(string id, Product productIn)
@@ -71,7 +71,7 @@ namespace ECommerceAPI.Controllers
                 return NotFound();
             }
 
-            _productService.Remove(product.product_id);
+            _productService.Remove(product.id);
 
             return NoContent();
         }
