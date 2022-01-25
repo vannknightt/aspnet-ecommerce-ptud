@@ -71,7 +71,7 @@ namespace ECommerceAPI
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.WithOrigins("http://localhost:8081")
+                    builder.WithOrigins("http://localhost:8081", "https://ptud.vercel.app")
                     .AllowAnyHeader()
                     .AllowCredentials()
                     .AllowAnyMethod()
