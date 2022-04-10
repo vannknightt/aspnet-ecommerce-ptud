@@ -71,7 +71,7 @@ namespace ECommerceAPI
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                 builder =>
                 {
-                    builder.WithOrigins("http://localhost:8081", "https://ptud.vercel.app")
+                    builder.WithOrigins("http://localhost:8081", "https://client-eccomerce-ptud.vercel.app")
                     .AllowAnyHeader()
                     .AllowCredentials()
                     .AllowAnyMethod()
@@ -105,22 +105,6 @@ namespace ECommerceAPI
             app.UseHttpsRedirection();
 
             app.UseStaticFiles();
-
-            // using Microsoft.Extensions.FileProviders;
-            // using System.IO;
-            //app.UseStaticFiles(new StaticFileOptions
-            //{
-            //    FileProvider = new PhysicalFileProvider(
-            //        Path.Combine(env.WebRootPath, "images")),
-            //    RequestPath = "/myimage"
-            //});
-
-            //app.UseDirectoryBrowser(new DirectoryBrowserOptions
-            //{
-            //    FileProvider = new PhysicalFileProvider(
-            //        Path.Combine(env.WebRootPath, "images")),
-            //    RequestPath = "/myimage"
-            //});
 
             app.UseSession();
             app.UseRouting();
